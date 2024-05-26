@@ -146,7 +146,7 @@ const Login = () => {
             fontSize={['16px', '16px', '20px', '20px']}
             fontWeight="semibold"
             lineHeight="normal">
-            <h1>Log in to Trello</h1>
+            <h1>Логин</h1>
           </Box>
           <Box my={4} textAlign="left">
             <form>
@@ -155,7 +155,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   value={values.email}
-                  placeholder="Enter Email "
+                  placeholder="Введите имейл "
                   onChange={handleChange}
                   autoComplete="off"
                 />
@@ -165,7 +165,7 @@ const Login = () => {
                   type="password"
                   name="password"
                   value={values.password}
-                  placeholder="Enter Password"
+                  placeholder="Введите пароль"
                   autoComplete="off"
                   onChange={handleChange}
                 />
@@ -178,11 +178,11 @@ const Login = () => {
                 onClick={loginUser}
                 isLoading={isFetching}
                 loadingText="Logging">
-                Sign In
+                Войти
               </Button>
               <Box m="5" textAlign="center">
                 <Link href="/signup" color="brand" p="2">
-                  Sign up for an account
+                  Зарегестрировать аккаунт
                 </Link>
               </Box>
               {showLoginError()}

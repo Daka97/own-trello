@@ -204,7 +204,7 @@ const SignUp = (): JSX.Element => {
             fontSize={['10px', '10px', '15px', '15px']}
             fontWeight="semibold"
             lineHeight="normal">
-            <h1>Sign up for your account</h1>
+            <h1>Создать аккаунт</h1>
           </Box>
           <Box my={4} textAlign="left">
             <FormControl isRequired>
@@ -212,18 +212,18 @@ const SignUp = (): JSX.Element => {
                 type="email"
                 name="email"
                 value={values.email}
-                placeholder="Enter Email"
+                placeholder="Введите имейл"
                 onChange={handleChange}
                 autoComplete="off"
               />
-              {emailErr && <p color="red">Invalid email.</p>}
+              {emailErr && <p color="red">Неверный имейл.</p>}
             </FormControl>
             <FormControl my="4" isRequired>
               <Input
                 type="text"
                 name="fullName"
                 value={values.fullName}
-                placeholder="Full name"
+                placeholder="Полное имя"
                 onChange={handleChange}
                 autoComplete="off"
               />
@@ -233,17 +233,17 @@ const SignUp = (): JSX.Element => {
                 type="password"
                 name="password"
                 value={values.password}
-                placeholder="Create password"
+                placeholder="Создать пароль"
                 onChange={handleChange}
               />
-              {passwordErr && <p color="red">Invalid password.</p>}
+              {passwordErr && <p color="red">Неверный пароль.</p>}
             </FormControl>
             <FormControl my="4">
               <Input
                 type="password"
                 name="confirmPassword"
                 value={values.confirmPassword}
-                placeholder="Confirm password"
+                placeholder="Подтвердите пароль"
                 onChange={handleChange}
               />
             </FormControl>
@@ -257,11 +257,11 @@ const SignUp = (): JSX.Element => {
               onClick={registerUser}
               isLoading={isCreating}
               loadingText="Registering">
-              Sign up
+              Создать аккаунт
             </Button>
             <Box m="5" textAlign="center">
               <Link href="/login" color="brand" p="2">
-                Already have an account? Log in.
+                Уже есть аккаунт? Войти
               </Link>
             </Box>
             {showSignUpError()}

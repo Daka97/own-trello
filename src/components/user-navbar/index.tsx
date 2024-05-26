@@ -56,7 +56,7 @@ const UserNavBar: FC = () => {
               />
             </MenuButton>
             <MenuList>
-              <MenuItem onClick={logout}>Log out</MenuItem>
+              <MenuItem onClick={logout}>Выйти</MenuItem>
             </MenuList>
           </Menu>
         </>
@@ -66,10 +66,10 @@ const UserNavBar: FC = () => {
     return (
       <>
         <Button fontSize="20" color="brand" variant="link" float="right" mr="2" pr="2">
-          <Link href="/login">Log in</Link>
+          <Link href="/login">Логин</Link>
         </Button>
         <Button fontSize="md" colorScheme="green" color="white" m="4">
-          <Link href="/signup">Sign up</Link>
+          <Link href="/signup">Регистрация</Link>
         </Button>
       </>
     );
@@ -84,7 +84,7 @@ const UserNavBar: FC = () => {
       </Link>
       <Link href="/boards">
         <Button size="xs" ml="5px" mr="10px" my="5px">
-          Boards
+          Таблицы
         </Button>
       </Link>
       <Spacer />
@@ -92,7 +92,7 @@ const UserNavBar: FC = () => {
         <SiTrello />
       </Box>
       <Text fontWeight="bold" fontSize="20px" mt="2px" color="white">
-        Trello clone
+        Trello клон
       </Text>
       <Spacer />
       {renderButtons()}

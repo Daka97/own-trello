@@ -64,23 +64,23 @@ const Boards = (): JSX.Element => {
           colorScheme="green"
           size="lg"
           mt="1rem">
-          Create a board
+          Создать панель
         </Button>
         <Modal onClose={onClose} isOpen={isOpen} isCentered>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Create board</ModalHeader>
+            <ModalHeader>Создать панель</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Input
                 value={board.name}
                 onChange={(e) => handleChange(e)}
-                placeholder="Board name"
+                placeholder="Название панели"
               />
             </ModalBody>
             <ModalFooter>
-              <Button onClick={handleCreate} isLoading={boardRequest} loadingText="Creating board">
-                Create
+              <Button onClick={handleCreate} isLoading={boardRequest} loadingText="Создание панели">
+                Создать
               </Button>
             </ModalFooter>
           </ModalContent>

@@ -31,10 +31,10 @@ const withSidebar = (App, props) => {
       const { page } = props;
 
       const sidebarMenu = [
-        { path: '/home', buttonName: 'Home', page: 'home', icon: AiOutlineHome },
-        { path: '/boards', buttonName: 'Boards', page: 'boards', icon: AiOutlineCreditCard },
-        { path: '/templates', buttonName: 'Templates', page: 'templates', icon: AiOutlineBuild },
-        { path: '/settings', buttonName: 'Settings', page: 'settings', icon: AiOutlineSetting }
+        { path: '/home', buttonName: 'Домой', page: 'home', icon: AiOutlineHome },
+        { path: '/boards', buttonName: 'Панели', page: 'boards', icon: AiOutlineCreditCard },
+        { path: '/templates', buttonName: 'Шаблоны', page: 'templates', icon: AiOutlineBuild },
+        { path: '/settings', buttonName: 'Настройки', page: 'settings', icon: AiOutlineSetting }
       ];
 
       return (

@@ -70,19 +70,19 @@ const InviteModal = () => {
   return (
     <>
       <Button onClick={onOpen} size="xs" ml="5px">
-        Invite
+        Пригласить
       </Button>
       <Modal onClose={onClose} isOpen={isOpen}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Invite User</ModalHeader>
+          <ModalHeader>Пригласить пользователя</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Input
               type="email"
               value={email}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="Введите имейл пользователя"
             />
           </ModalBody>
           {emailErr && <p>{emailErr}</p>}
@@ -93,8 +93,8 @@ const InviteModal = () => {
               mr={3}
               onClick={handleClick}
               isLoading={isMailSending}
-              loadingText="Sending">
-              Invite
+              loadingText="Отправляем">
+              Пригласить
             </Button>
           </ModalFooter>
         </ModalContent>

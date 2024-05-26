@@ -1,10 +1,19 @@
-import React from 'react';
-//https://github.com/zenoamaro/react-quill/issues/122
-const ReactQuill = typeof window === 'object' ? require('react-quill') : () => false;
-import 'react-quill/dist/quill.snow.css';
+import React, { useEffect, useState } from 'react';
 import { Box } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
+
+const ReactQuill = dynamic(() => import('react-quill'), {
+  ssr: false
+});
+import 'react-quill/dist/quill.snow.css';
 
 const QuillEditor = ({ value, onChange }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const modules = {
     toolbar: [
       [{ header: [1, 2, false] }],
@@ -31,13 +40,16 @@ const QuillEditor = ({ value, onChange }) => {
 
   return (
     <Box className="text-editor">
-      <ReactQuill
-        theme="snow"
-        style={{ height: '120px' }}
-        value={value}
-        onChange={(value) => onChange(value)}
-        modules={modules}
-        formats={formats}></ReactQuill>
+      {isClient && (
+        <ReactQuill
+          theme="snow"
+          style={{ height: '120px' }}
+          value={value}
+          onChange={(value) => onChange(value)}
+          modules={modules}
+          formats={formats}
+        />
+      )}
     </Box>
   );
 };

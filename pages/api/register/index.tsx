@@ -25,7 +25,7 @@ const createUser = async (body, res) => {
 
     if (isExistingUser) {
       const data = {
-        message: 'Email is already registered'
+        message: 'Имейл уже зарегистрирован'
       };
 
       res.status(404).send(data);

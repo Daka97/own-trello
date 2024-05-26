@@ -13,14 +13,19 @@ const WelcomeScreen = (): JSX.Element => {
           justifyContent="center"
           p="4rem">
           <Box>
-            <Text fontSize={['40px', '40px', '50px', '50px']} fontWeight="bold" lineHeight="50px">
-              Trello helps teams move work forward.
+            <Text
+              fontSize={['30px', '30px', '33px', '33px']}
+              fontWeight="bold"
+              lineHeight="50px"
+              marginBottom="10px">
+              Trello Клон помогает командам эфективнее делать свою работу.
             </Text>
             <Text
-              fontSize={['1rem', '1rem', '1.5rem', '1.5rem']}
+              fontSize={['0.5rem', '0.5rem', '1rem', '1.5rem']}
               width={['100%', '100%', '50%', '50%']}>
-              Collaborate, manage projects, and reach new productivity peaks. From high rises to the
-              home office, the way your team works is unique - accomplish it all with Trello.
+              Сотрудничайте, управляйте проектами и достигайте новых вершин продуктивности. От
+              высотки до домашнего офиса - ваша команда работает по-своему, и все это можно
+              реализовать с помощью Trello клона.
             </Text>
           </Box>
           <Box>
