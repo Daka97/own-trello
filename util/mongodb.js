@@ -34,7 +34,7 @@ export async function connectToDatabase() {
       useUnifiedTopology: true
     };
 
-    const mongoURL ='mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/';
+    const mongoURL ='mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
       console.log(mongoURL, "MONGOURL")
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
