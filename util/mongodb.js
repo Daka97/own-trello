@@ -1,6 +1,8 @@
 import { MongoClient } from 'mongodb';
 
-const { MONGODB_URI, MONGODB_DB } = process.env;
+// const {  MONGODB_DB } = process.env;
+const MONGODB_URI = 'mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/';
+const MONGODB_DB = 'trello-online'
 
 if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
