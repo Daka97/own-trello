@@ -17,21 +17,23 @@ if (!MONGODB_DB) {
  * in development. This prevents connections growing exponentially
  * during API Route usage.
  */
-let cached = global.mongo;
+// let cached = global.mongo;
 
-if (!cached) {
-  cached = global.mongo = { conn: null, promise: null };
-}
+// if (!cached) {
+//   cached = global.mongo = { conn: null, promise: null };
+// }
 
 export async function connectToDatabase() {
-  if (cached.conn) {
-    return cached.conn;
-  }
+  // if (cached.conn) {
+  //   return cached.conn;
+  // }
 
-  if (!cached.promise) {
+  // if (!cached.promise) {
     const opts = {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000, // Adjust as necessary
+      connectTimeoutMS: 10000, // Adjust as necessary
     };
 
     const mongoURL ='mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
@@ -43,7 +45,8 @@ export async function connectToDatabase() {
         db: client.db(MONGODB_DB)
       };
     });
-  }
+  // }
   cached.conn = await cached.promise;
+  console.log(cached.conn, "CACHED")
   return cached.conn;
 }
