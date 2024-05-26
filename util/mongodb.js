@@ -34,9 +34,9 @@ export async function connectToDatabase() {
       useUnifiedTopology: true
     };
 
-    const mongoURL =
-      process.env.NODE_ENV === 'development' ? process.env.LOCAL_MONGODB : process.env.MONGODB_URI;
+    const mongoURL ='mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/';
 
+      console.log(mongoURL, "MONGOURL")
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
       return {
         client,

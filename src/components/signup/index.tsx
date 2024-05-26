@@ -127,8 +127,8 @@ const SignUp = (): JSX.Element => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Error</AlertTitle>
-        <AlertDescription>Email already in use</AlertDescription>
+        <AlertTitle mr={2}>Ошибка</AlertTitle>
+        <AlertDescription>Имейл уже испольуется</AlertDescription>
         <CloseButton
           position="absolute"
           right="8px"
