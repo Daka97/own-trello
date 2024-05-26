@@ -94,6 +94,10 @@ const SignUp = (): JSX.Element => {
       body: JSON.stringify(data)
     });
 
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
     const result = await response.json();
     setIsCreatingStatus(false);
 

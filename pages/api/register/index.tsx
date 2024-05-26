@@ -20,6 +20,8 @@ const createUser = async (body, res) => {
 
   const { db, client } = await connectToDatabase();
 
+  console.log('CONNECTED TO DB', db, client);
+
   if (client.isConnected()) {
     const isExistingUser = await isUserExists(db, email);
 

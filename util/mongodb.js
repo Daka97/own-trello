@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 
 // const {  MONGODB_DB } = process.env;
-const MONGODB_URI = 'mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/';
+const MONGODB_URI = 'mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const MONGODB_DB = 'trello-online'
 
 if (!MONGODB_URI) {
