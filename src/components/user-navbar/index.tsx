@@ -92,7 +92,7 @@ const UserNavBar: FC = () => {
         <SiTrello />
       </Box>
       <Text fontWeight="bold" fontSize="20px" mt="2px" color="white">
-        Trello клон
+        Trello-KZ
       </Text>
       <Spacer />
       {renderButtons()}

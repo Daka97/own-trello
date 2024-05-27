@@ -107,7 +107,7 @@ const Login = () => {
       <Box display="flex" justifyContent="center" alignItems="center" my="40px">
         <Image height="20px" mt="2" src="/trello-icon.svg" alt="brand logo"></Image>
         <Text fontWeight="bold" fontSize="28px" m="4px">
-          Trello
+          Trello-KZ
         </Text>
       </Box>
 

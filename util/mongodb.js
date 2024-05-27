@@ -34,6 +34,8 @@ export async function connectToDatabase() {
       useUnifiedTopology: true,
       serverSelectionTimeoutMS: 5000, // Adjust as necessary
       connectTimeoutMS: 10000, // Adjust as necessary
+      ssl: true,  // Ensure SSL is enabled
+      tlsAllowInvalidCertificates: false, 
     };
 
     const mongoURL ='mongodb+srv://urdavlet:vywSnnwQyLw4tXCF@cluster0.obefa7r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
@@ -46,6 +48,7 @@ export async function connectToDatabase() {
       };
     });
   // }
+  console.log("CACHED", cached.promise)
   cached.conn = await cached.promise;
   console.log(cached.conn, "CACHED")
   return cached.conn;

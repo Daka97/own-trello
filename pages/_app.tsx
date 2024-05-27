@@ -27,7 +27,7 @@ const TrelloApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Trello clone</title>
+        <title>Trello-KZ</title>
         <link rel="shortcut icon" href="/trello-icon.svg"></link>
       </Head>
       <NextNprogress color="#0079bf" startPosition={0.3} stopDelayMs={200} height={4} />
