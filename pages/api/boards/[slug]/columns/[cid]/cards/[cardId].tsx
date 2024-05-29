@@ -28,13 +28,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       case 'DELETE': {
         await db.collection('cards').deleteOne({ _id: cardId, columnId: cid });
 
-        res.send({ messsage: 'Deleted' });
+        res.send({ messsage: 'Удален' });
 
         break;
       }
 
       default:
-        res.send({ message: 'Invalid request type' });
+        res.send({ message: 'Неправильный тип запроса' });
         break;
     }
   } else {

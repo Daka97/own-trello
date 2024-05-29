@@ -90,8 +90,8 @@ const Login = () => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle mr={2}>Error</AlertTitle>
-        <AlertDescription>Invalid username or password</AlertDescription>
+        <AlertTitle mr={2}>Ошибка</AlertTitle>
+        <AlertDescription>Неверная почта или пароль</AlertDescription>
         <CloseButton
           position="absolute"
           right="8px"
@@ -177,7 +177,7 @@ const Login = () => {
                 color="white"
                 onClick={loginUser}
                 isLoading={isFetching}
-                loadingText="Logging">
+                loadingText="Загрузка">
                 Войти
               </Button>
               <Box m="5" textAlign="center">

@@ -66,7 +66,9 @@ const NavBar: FC<IProps> = ({ bg }) => {
   return (
     <Box bg={bg} boxShadow="md">
       <Flex>
+        <Link href={user?.isValid ? '/home' : '/'}>
         <Image height="8" src="/trello-logo.svg" alt="brand logo" m="5"></Image>
+        </Link>
         <Spacer />
         {renderButtons()}
       </Flex>
